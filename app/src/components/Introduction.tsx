@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
+import Loading from "./Loading";
 
 export default function Introduction() {
   const [generalStats, setGeneralStats] = useState<any>();
+  const [isLoadingStats, setIsLoadingStats] = useState<boolean>(false);
 
   useEffect(() => {
+    setIsLoadingStats(true);
     fetch("/api/general/stats")
       .then((res) => res.json())
       .then((data) => {
         setGeneralStats(data);
+        setIsLoadingStats(false);
       });
   }, []);
 
@@ -17,6 +21,7 @@ export default function Introduction() {
         GMX Impact on the Arbitrum Ecosystem
       </div>
       <div className="relative overflow-x-auto mt-8">
+        {isLoadingStats ? <Loading /> : null}
         {generalStats ? (
           <table className="w-full px-6 text-sm text-left text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
