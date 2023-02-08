@@ -8,7 +8,7 @@ I utilized the Arbitrum core tables on Flipside crypto to assess transaction vol
 
 # 👩‍💻 Getting Started
 
-Please note: There is a known issue with @flipsidecrypto/sdk package on Typescript/Javascript. Please follow these steps to resolve the issue:
+Please note: There is a known issue with the `@flipsidecrypto/sdk` package on Typescript/Javascript. Please follow these steps to resolve the issue:
 
 Run the following commands:
 ```
