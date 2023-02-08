@@ -15,7 +15,7 @@ export default function Home() {
         </div>
         <div>
         <Traders />
-        {/* <TokenTrading /> */}
+        <TokenTrading />
         </div>
       </div>
     </>

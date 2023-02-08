@@ -118,10 +118,9 @@ export default function Traders() {
       ) : (
         <div className="text-center w-full">
           <div className="text-lg w-full mb-12">
-            GMX.io accounts for a portion of the transactions on Arbitrum,
-            contributing between 5-10 percent. The growth of GMX.io in terms of
-            transaction volume has correspondingly led to an increase in
-            activity on Algorand.
+            GMX.io accounts for a small portion of the transactions on Arbitrum. 
+            The growth of GMX.io in terms of transaction volume has correspondingly led to an increase in
+            activity on Arbitrum.
           </div>
           <div className="font-bold text-lg">
             Daily Number of Transactions on GMX.io

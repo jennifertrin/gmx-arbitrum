@@ -91,6 +91,7 @@ export default async function handler(
       group by
         token_symbol,
         date
+      order by date asc
     )
   select
     'Arbitrum' as Platform,

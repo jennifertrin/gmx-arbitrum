@@ -21,6 +21,9 @@ export default function Introduction() {
         GMX.io Impact on the Arbitrum Ecosystem
       </div>
       <div className="text-lg w-full mt-12">
+      <div className="text-2xl font-bold w-full mb-6">
+        What is GMX.io?
+      </div>
         <a className="text-blue-700 underline">GMX.io</a> is a decentralized
         spot and perpetual exchange that supports low swap fees and zero price
         impact trades supported on Arbitrum and Avalanche chains. This analysis
@@ -63,7 +66,7 @@ export default function Introduction() {
           </table>
         ) : null}
         <div className="text-lg w-full mt-6">
-          This suggests that gmx.io, as a whole, represents a limited portion of
+          This initially suggests that gmx.io, as a whole, represents a small but still significant portion of
           the Arbitrum ecosystem.
         </div>
       </div>
