@@ -21,14 +21,18 @@ export default function Introduction() {
         GMX.io Impact on the Arbitrum Ecosystem
       </div>
       <div className="text-lg w-full mt-12">
-        <a className="text-blue-700 underline">GMX.io</a> is a decentralized spot and perpetual exchange that supports low
-        swap fees and zero price impact trades supported on Arbitrum and
-        Avalanche chains. This analysis attempts to assess the impact of GMX.io
-        on growth of the the Arbitrum chain.
+        <a className="text-blue-700 underline">GMX.io</a> is a decentralized
+        spot and perpetual exchange that supports low swap fees and zero price
+        impact trades supported on Arbitrum and Avalanche chains. This analysis
+        attempts to assess the impact of GMX.io on growth of the the Arbitrum
+        chain.
       </div>
-      <div className="text-lg w-full mt-6">This graph provides an overview on the transaction, user, and total volume on GMX.io:</div>
-      <div className="text-lg w-full mt-12">
+      <div className="text-lg w-full mt-6">
+        This graph provides an overview on the transaction, user, and total
+        volume on GMX.io compared to the Arbitrum ecosystem. Please note that
+        Arbitrum historical data has not been back populated on Flipside.
       </div>
+      <div className="text-lg w-full mt-12"></div>
       <div className="relative overflow-x-auto mt-8">
         {isLoadingStats ? <Loading /> : null}
         {generalStats ? (
@@ -58,6 +62,10 @@ export default function Introduction() {
             </tbody>
           </table>
         ) : null}
+        <div className="text-lg w-full mt-6">
+          This suggests that gmx.io, as a whole, represents a limited portion of
+          the Arbitrum ecosystem.
+        </div>
       </div>
     </div>
   );
