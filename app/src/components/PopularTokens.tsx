@@ -25,13 +25,22 @@ export default function PopularTokens() {
         on GMX.io platform earns users Staked, Bonus, and Fee GMX or sbfGMX
         tokens. Tracking the usage of both GMX and sbfGMX provides insight into
         the platform's popularity. To learn more about GMX.io's rewards program,
-        please review{' '}
-        <a href="https://gmxio.gitbook.io/gmx/tokenomics" className="text-blue-700 underline">their docs</a>.
+        please review{" "}
+        <a
+          href="https://gmxio.gitbook.io/gmx/tokenomics"
+          className="text-blue-700 underline"
+        >
+          their docs
+        </a>
+        .
       </div>
       <div className="text-lg w-full mt-12">
         GMX token is ranked as the 6th most cumulatively traded token in the
         Arbitrum ecosystem. sbfGMX is ranked as the 22nd most cumulatively
-        traded token in the Arbitrum ecosystem.
+        traded token in the Arbitrum ecosystem. Ecosystem token distribution
+        suggests that GMX is the second most popular governance token, behind
+        MAGIC. It also suggests that GMX.io is one of the most popular dapps
+        with tokens, behind Treasure (creator of MAGIC).
       </div>
       <div className="relative overflow-x-auto mt-8">
         {isLoadingStats ? <Loading /> : null}

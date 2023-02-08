@@ -1,5 +1,6 @@
 import Introduction from "@/components/Introduction";
 import PopularTokens from "@/components/PopularTokens";
+import TokenTrading from "@/components/TokenTrading";
 import Traders from "@/components/Traders";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         </div>
         <div>
         <Traders />
+        <TokenTrading />
         </div>
       </div>
     </>
