@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
 
-export default function Introduction() {
+export default function PopularTokens() {
   const [generalStats, setGeneralStats] = useState<any>();
   const [isLoadingStats, setIsLoadingStats] = useState<boolean>(false);
 
   useEffect(() => {
     setIsLoadingStats(true);
-    fetch("/api/general/stats")
+    fetch("/api/general/popular")
       .then((res) => res.json())
       .then((data) => {
         setGeneralStats(data);
@@ -16,18 +16,22 @@ export default function Introduction() {
   }, []);
 
   return (
-    <div className="mx-12">
-      <div className="text-5xl font-bold w-full mt-12">
-        GMX.io Impact on the Arbitrum Ecosystem
+    <div className="mx-12 mb-12">
+      <div className="text-2xl font-bold w-full mt-12">
+        Most Popular Tokens in the Arbitrum Ecosystem
       </div>
       <div className="text-lg w-full mt-12">
-        <a className="text-blue-700 underline">GMX.io</a> is a decentralized spot and perpetual exchange that supports low
-        swap fees and zero price impact trades supported on Arbitrum and
-        Avalanche chains. This analysis attempts to assess the impact of GMX.io
-        on growth of the the Arbitrum chain.
+        GMX.io has a utility and governance token named GMX. Staking GMX tokens
+        on GMX.io platform earns users Staked, Bonus, and Fee GMX or sbfGMX
+        tokens. Tracking the usage of both GMX and sbfGMX provides insight into
+        the platform's popularity. To learn more about GMX.io's rewards program,
+        please review{' '}
+        <a href="https://gmxio.gitbook.io/gmx/tokenomics" className="text-blue-700 underline">their docs</a>.
       </div>
-      <div className="text-lg w-full mt-6">This graph provides an overview on the transaction, user, and total volume on GMX.io:</div>
       <div className="text-lg w-full mt-12">
+        GMX token is ranked as the 6th most cumulatively traded token in the
+        Arbitrum ecosystem. sbfGMX is ranked as the 22nd most cumulatively
+        traded token in the Arbitrum ecosystem.
       </div>
       <div className="relative overflow-x-auto mt-8">
         {isLoadingStats ? <Loading /> : null}
@@ -44,11 +48,21 @@ export default function Introduction() {
             </thead>
             <tbody>
               {generalStats.result.rows.map((row: any) => (
-                <tr key={row}>
+                <tr
+                  key={row}
+                  className={` ${
+                    row.includes(
+                      "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a"
+                    ) ||
+                    row.includes("0xd2d1162512f927a7e282ef43a362659e4f2a728f")
+                      ? "font-bolder text-xl"
+                      : "font-normal text-xs"
+                  }`}
+                >
                   {row.map((item: string) => (
                     <td
                       key={item}
-                      className="px-6 py-4 font-normal bg-white text-gray-900 whitespace-nowrap dark:text-white"
+                      className="px-6 py-4 font-normal  bg-white text-gray-900 whitespace-nowrap dark:text-white"
                     >
                       {item}
                     </td>
