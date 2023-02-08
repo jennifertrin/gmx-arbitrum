@@ -19,7 +19,7 @@ yarn
 yarn run dev
 ```
 
-In the package.json, update this:
+In the `package.json`, update this:
 
 ```
 "main": "dist/index.js",
@@ -32,5 +32,23 @@ In the package.json, update this:
 "main": "dist/src/index.js",
 "types": "dist/src/index.d.ts",
 ```
+Then, also:
 
+```
+cd dist
+```
+
+In the `package.json` in the `dist` folder, update this:
+
+```
+"main": "dist/index.js",
+"types": "dist/index.d.ts",
+```
+  
+ to this:
+ 
+```
+"main": "dist/src/index.js",
+"types": "dist/src/index.d.ts",
+```
 
