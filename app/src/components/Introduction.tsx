@@ -28,7 +28,7 @@ export default function Introduction() {
         chain.
       </div>
       <div className="text-lg w-full mt-6">
-        This graph provides an overview on the transaction, user, and total
+        This graph provides an overview on the transactions, users, and total
         volume on GMX.io compared to the Arbitrum ecosystem. Please note that
         Arbitrum historical data has not been back populated on Flipside.
       </div>
